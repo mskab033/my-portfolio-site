@@ -6,9 +6,9 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="mskab portfolio">
   <meta property="og:url" content="https://mskab.com/">
-  <meta property="og:description" content="mskabのポートフォリオサイトです。デザインから生まれる人と人とのつながりを大切に、製作させていただきます。">
+  <meta property="og:description" content="mskabのポートフォリオサイトです。デザインから生まれる人と人とのつながりを大切に、制作させていただきます。">
   <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/ogp.png">
-  <meta name="description" content="mskabのポートフォリオサイトです。デザインから生まれる人と人とのつながりを大切に、製作させていただきます。" />
+  <meta name="description" content="mskabのポートフォリオサイトです。デザインから生まれる人と人とのつながりを大切に、制作させていただきます。" />
   <title>mskab portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
