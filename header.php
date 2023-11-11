@@ -27,7 +27,7 @@
       <p class="header-logo">
         <a href="/">mskab</a>
       </p>
-      <nav class="gnav">
+      <nav class="gnav" id="js-nav">
         <ul class="gnav-list">
           <?php
             if(is_home()) {
@@ -42,5 +42,10 @@
           <li class="gnav-item"><a href="<?php echo $home_url; ?>#contact">CONTACT</a></li>
         </ul>
       </nav>
+      <button class="hamburger" id="js-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
