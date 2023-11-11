@@ -6,7 +6,6 @@
           <?php the_post_thumbnail(); ?>
           <div class="article-title"><?php the_title(); ?></div>
           <div class="article-body">
-            <div class="used-skill"><?php echo post_custom('used-skill'); ?></div>
             <div>
               <?php the_content(); ?>
             </div>
