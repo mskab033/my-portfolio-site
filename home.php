@@ -14,7 +14,7 @@
 
     <!-- about -->
     <section class="about" id="about">
-      <div class="about__inner">
+      <div class="about__inner animation-fadein">
         <div class="about__heading">
           <h2 class="about__heading-text">ABOUT</h2>
         </div>
@@ -44,7 +44,7 @@
     <!-- skill -->
     <section class="skill" id="skill">
       <div class="skill__inner">
-        <div class="skill__heading">
+        <div class="skill__heading animation-fadein">
           <h2>SKILL</h2>
         </div>
         <div class="skill__container">
@@ -58,7 +58,7 @@
           ?>
           <?php foreach($posts as $post): ?>
             <?php setup_postdata($post); ?>
-            <div class="skill__item">
+            <div class="skill__item animation-fadein">
               <div class="skill__body">
                 <div class="skill__img">
                   <div class="skill__icon"><?php the_post_thumbnail(); ?></div>
@@ -77,7 +77,7 @@
     <!-- works -->
     <section class="works" id="works">
       <div class="works__inner">
-        <div class="works__heading">
+        <div class="works__heading animation-fadein">
           <h2>WORKS</h2>
         </div>
         <div class="works__container">
@@ -91,7 +91,7 @@
           ?>
           <?php foreach($posts as $post): ?>
             <?php setup_postdata($post); ?>
-            <a class="works__item" href="<?php echo get_permalink(); ?>">
+            <a class="works__item animation-fadein" href="<?php echo get_permalink(); ?>">
               <div class="works__img"><img src="<?php echo post_custom('thumbnail-path'); ?>" /></div>
               <p class="works__name"><?php the_title(); ?></p>
             </a>
@@ -104,7 +104,7 @@
 
     <!-- contact -->
     <section class="contact" id="contact">
-      <div class="contact__inner">
+      <div class="contact__inner animation-fadein">
         <div class="contact__heading">
           <h2 class="contact__heading-text">CONTACT</h2>
         </div>
