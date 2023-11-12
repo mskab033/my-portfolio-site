@@ -19,7 +19,8 @@
           <h2 class="about__heading-text">ABOUT</h2>
         </div>
         <div class="about__container">
-          <h3 class="about__concept">Shape one's thought</h3>
+          <h3 class="about__concept">
+            <span>Shape </span><br class="sp-only"><span>one's thought</span></h3>
           <p>「デザイン」は人の想いを具現化し、伝えるためのもの。<br>
             私のデザインを通して皆様の想いが届き、人と人が繋がる、<br class="pc-only">
             その橋渡しができればと考えています。
