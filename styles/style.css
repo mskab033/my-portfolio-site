@@ -106,7 +106,7 @@ hr {
 ---------------------------------*/
 .header {
   position: fixed;
-  z-index: 1;
+  z-index: 999;
   top: 0;
   left: 0;
   right: 0;
@@ -166,6 +166,10 @@ hr {
 
 .gnav-item a:hover:after {
   width: 100%;
+}
+
+.hamburger {
+  display: none;
 }
 
 /*--------------------------------
@@ -533,10 +537,10 @@ hr {
   }
 
   .header {
-    height: 50px;
+    height: 67px;
   }
 
-    .header .container {
+  .header .container {
     padding: 20px;
   }
 
@@ -544,8 +548,85 @@ hr {
     font-size: 16px;
   }
 
+  .gnav {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateY(100%);
+    background-color: #333;
+    transition: ease .4s;
+  }
+
+  .gnav-list {
+    position: absolute;
+    top: 70%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    display: block;
+  }
+
+  .gnav-item {
+    margin: 20px 0 !important;
+  }
+
   .gnav-item a {
-    font-size: 10px;
+    color: #fafafa;
+    display: block;
+    font-size: 20px;
+  }
+
+  .gnav-item a:after {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    width: 25px;
+    height: 100%;
+    background-color: transparent;
+    border-color: transparent;
+    z-index: 9999;
+  }
+  
+  .hamburger span {
+    width: 100%;
+    height: 0.5px;
+    background-color: #333;
+    position: relative;
+    transition: all .4s;
+    display: block;
+  }
+  
+  .hamburger span:nth-child(1) {
+    top: 0px; 
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  
+  .hamburger span:nth-child(2) {
+    top: 0px;
+    width: 70%;
+  }
+  
+  .gnav.active {
+    transform: translateY(0);
+  }
+  
+  .hamburger.active span {
+    background-color: #fafafa;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(6px) rotate(-45deg);
+    width: 70%;
+  }
+  
+  .hamburger.active span:nth-child(2) {
+    transform: translateY(-2px) rotate(45deg);
   }
 
   .mv-container {
@@ -553,7 +634,7 @@ hr {
   }
 
   .mv-container .thin-border {
-    height: 38px;
+    height: 55px;
     margin-bottom: 12px;
     margin-left: 25%;
     border-left: solid 1px #333;
