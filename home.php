@@ -29,12 +29,14 @@
           <p class="about__profile">
             神奈川県在住。<br>
             大学卒業後、都内のDX推進会社にエンジニアとして就職。<br>
-            3年半在席し、現在はWebデザイナーへジョブチェンジのためオンラインスクールのWebデザインコースを受講し週40時間ほど勉強中。
+            3年半在席し、WebデザイナーへジョブチェンジのためオンラインスクールのWebデザインコースを受講。<br>
+            卒業後の現在もスキルアップのため週40時間ほど勉強中。
           </p>
           <p class="about__en-profile en-text">
             I live in Kanagawa prefecture.<br>
             After graduating from university, I've worked as an engineer at DX promotion company in Tokyo.<br>
-            After working for 3.5 years, I've been taking a web design course at an online school and studying about 40 hours a week to change my job to a web designer.
+            After working there for 3.5 years, I took a web design course at an online school for 1.5 months to change my job to web designer.<br>
+            After graduation, I've been studying 40 hours every week to improve my skills.
           </p>
         </div>
       </div>
