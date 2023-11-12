@@ -45,7 +45,6 @@
       <button class="hamburger" id="js-hamburger">
         <span></span>
         <span></span>
-        <span></span>
       </button>
     </div>
   </header>

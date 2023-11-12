@@ -574,8 +574,7 @@ hr {
   }
 
   .gnav-item a {
-    font-size: 12px;
-    color: #fff;
+    color: #fafafa;
     display: block;
     font-size: 20px;
   }
@@ -595,48 +594,41 @@ hr {
   
   .hamburger span {
     width: 100%;
-    height: 1px;
+    height: 0.5px;
     background-color: #333;
     position: relative;
-    transition: ease .4s;
+    transition: all .4s;
     display: block;
   }
   
   .hamburger span:nth-child(1) {
-    top: 0;
+    top: 0px; 
+    width: 100%;
+    margin-bottom: 8px;
   }
   
   .hamburger span:nth-child(2) {
-    margin: 8px 0;
+    top: 0px;
+    width: 70%;
   }
   
-  .hamburger span:nth-child(3) {
-    top: 0;
-  }
-  
-  /* ハンバーガーメニュークリック後のスタイル */
   .gnav.active {
     transform: translateY(0);
   }
   
   .hamburger.active span {
-    background-color: #fff;
+    background-color: #fafafa;
   }
 
   .hamburger.active span:nth-child(1) {
-    top: 5px;
-    transform: rotate(45deg);
+    transform: translateY(6px) rotate(-45deg);
+    width: 70%;
   }
   
   .hamburger.active span:nth-child(2) {
-    opacity: 0;
+    transform: translateY(-2px) rotate(45deg);
   }
-  
-  .hamburger.active span:nth-child(3) {
-    top: -13px;
-    transform: rotate(-45deg);
-  }
-  
+
   .mv-container {
     height: 340px;
   }
