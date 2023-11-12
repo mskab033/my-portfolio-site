@@ -4,7 +4,6 @@ body {
   letter-spacing: .05em;
   color: #333;
   background-color: #fafafa;
-  max-width: 1200px;
   margin: 0 auto;
   overflow-x: hidden;
 }
@@ -21,20 +20,6 @@ img {
   border-style: none;
 }
 
-h2, h6 {
-  font-family: 'Gothic A1';
-}
-
-h2 {
-  font-size: 80px;
-  font-weight: 100;
-}
-
-h6 {
-  font-size: 32px;
-  font-weight: 400;
-}
-
 .en-text {
   font-family: Arial;
 }
@@ -43,26 +28,15 @@ h6 {
  レイアウト
 ---------------------------------*/
 section {
-  padding: 180px 70px;
+  padding: 180px 0;
 }
 
-.article {
-  padding: calc(180px + 30px) 70px 180px;
+article {
+  padding: calc(180px + 120px) 0 180px;
 }
 
-.contact-section {
-  padding-bottom: 100px;
-}
-
-.skill-section, .contact-section {
+.skill, .contact {
   background-color: #f1efeb;
-}
-
-.skill-section, .contact-section, .page-top, .footer {
-  margin-right: calc(50% - 50vw);
-  margin-left: calc(50% - 50vw);
-  padding-right: calc(50vw - 50%);
-  padding-left: calc(50vw - 50%);
 }
 
 .pc-only {
@@ -76,29 +50,29 @@ section {
 /*--------------------------------
  見出し
 ---------------------------------*/
-.title-name {
+h2, h6 {
+  font-family: 'Gothic A1';
+}
+
+h2 {
+  font-size: 80px;
+  font-weight: 100;
   width: fit-content;
-  color: #333;
-  letter-spacing: -0.01em;
 }
 
-.skill-section .title-name, .contact-section .title-name {
-  margin: 0 70px 0 auto;
+h6 {
+  font-size: 32px;
+  font-weight: 400;
 }
 
-hr {
-  size: 1px;
-  color: #333;
-  width: 0;
-  margin: auto auto 110px 100px;
-  transition: width 1s;
-  &.is-animated {
-    width: 40%;
-  }
+.about__heading-text, .contact__heading-text {
+  font-size: inherit;
+  font-weight: 400;
+  color: #9a9a9a;
 }
 
-.contact-section hr {
-  margin: 0 170px 80px auto;
+.skill h2, .contact h2 {
+  margin: 0 0 0 auto;
 }
 
 /*--------------------------------
@@ -109,41 +83,42 @@ hr {
   z-index: 999;
   top: 0;
   left: 0;
-  right: 0;
-  max-width: inherit;
-  height: 150px;
-  margin: 0 auto;
+  width: 100%;
   background-color: transparent;
   font-family: 'Gothic A1';
 }
 
-.header .container {
-  display: flex;
-  height: 100%;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 70px;
+.header__inner {
+  margin-inline: auto;
+  padding-inline: 70px;
+  padding-block: 64px;
+  max-width: 1200px;
 }
 
-.header-logo {
+.header__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__logo {
   font-size: 24px;
 }
 
-.header-logo a {
+.header__logo a {
   color: #333;
 }
 
-.gnav-list {
+.nav__list {
   display: flex;
   justify-content: space-between;
   list-style: none;
 }
 
-.gnav-item:not(:last-child) {
-  margin-right: 30px;
+.nav__item:not(:last-child) {
+  margin-right: 60px;
 }
 
-.gnav-item a {
+.nav__item a {
   position: relative;
   display: inline-block;
   color: #333;
@@ -151,7 +126,7 @@ hr {
   padding: 5px 0;
   transition: .3s;
 }
-.gnav-item a:after {
+.nav__item a::after {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -164,121 +139,148 @@ hr {
   background-color: #333;
 }
 
-.gnav-item a:hover:after {
+.nav__item a:hover::after {
   width: 100%;
 }
 
-.hamburger {
+.hamburger__menu {
   display: none;
 }
 
 /*--------------------------------
  メインビジュアル
 ---------------------------------*/
-.mv-container {
-  width: auto;
+.mv__inner {
+  margin-inline: auto;
+  padding-inline: 70px;
+  max-width: 1200px;
   height: 100vh;
 }
 
-.mv-container .thin-border {
-  height: 120px;
-  margin-bottom: 30px;
-  margin-left: 20%;
+.mv__thin-border {
+  height: 113px;
+  margin-bottom: 37px;
+  margin-left: 19%;
   border-left: solid 1px #333;
 }
 
-.mv-container .bold-border {
-  height: calc(100vh - 150px);
-  margin-left: 20%;
+.mv__bold-border {
+  height: calc(100vh - 113px - 37px);
+  margin-left: 19%;
   border-left: solid 2px #333;
 }
 
-.mv-container img {
-  padding-top: calc(30vh);
-  padding-right: 70px;
-  float: right;
+.mv__text {
+  position: relative;
+}
+
+.mv__text img {
+  position: absolute;
+  bottom: 30%;
+  right: 0;
 }
 
 /*--------------------------------
  About
 ---------------------------------*/
-.about-body {
-  max-width: 70%;
-  margin: 0 auto 0 100px;
+.about__inner {
+  margin-inline: auto;
+  padding-inline: 70px;
+  max-width: 1200px;
 }
 
-.about-body p {
-  line-height: 3.75;
+.about__heading {
+  position: relative;
 }
 
-.concept {
-  font-family: "Caveat", cursive;
-  font-size: 86px !important;
-  font-weight: 400;
-  margin: 0 auto 30px -20px;
-}
-
-.profile-body p {
-  line-height: 2.5;
-}
-
-.profile-body p:not(:last-child) {
+.about__heading-text {
   margin-bottom: 30px;
 }
 
-.name {
+.about__heading-text::after {
+  position: absolute;
+  bottom: 5px;
+  left: 58px;
+  width: 360px;
+  height: 1px;
+  content: "";
+  background-color: #9a9a9a;
+}
+
+.about__container {
+  margin: 0 100px;
+}
+
+.about__container p {
+  line-height: 2.5;
+}
+
+.about__concept {
+  font-family: "Caveat", cursive;
+  font-size: 86px !important;
+  font-weight: 400;
+  margin: 0 auto 70px -20px;
+}
+
+.about__name {
   margin: 60px auto 40px;
 }
 
+.about__profile {
+  margin-bottom: 40px;
+}
 
 /*--------------------------------
  Skill
 ---------------------------------*/
-.skill-list {
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 0 170px;
+.skill__inner {
+  margin-inline: auto;
+  padding-inline: 70px;
+  max-width: 1200px;
 }
 
+.skill__container {
+  margin: 0 100px 100px;
+}
 
-.skill-item {
+.skill__item {
   border-bottom: solid 1px #333;
 }
 
-.skill-item:first-of-type {
+.skill__item:first-of-type {
   border-top: solid 1px #333;
 }
 
-.skill-body {
+.skill__body {
   margin: 80px auto;
   display: flex;
   align-items: center;
   width: 80%;
 }
 
-.skill-img {
+.skill__img {
   width: 30%;
   margin: auto 70px auto 0;
 }
 
-.skill-icon {
+.skill__icon {
   width: fit-content;
   margin: 0 auto 10px auto;
 }
 
-.skill-icon img {
+.skill__icon img {
   max-height: 80px;
   width: auto;
 }
 
-.skill-name {
+.skill__name {
   width: fit-content;
   text-align: center;
   font-size: 20px;
   margin: 0 auto;
 }
 
-.skill-text {
+.skill__text {
   flex: 1;
   text-align: justify;
   line-height: 2.5;
@@ -287,51 +289,82 @@ hr {
 /*--------------------------------
  Works
 ---------------------------------*/
-.works-list {
+.works__inner {
+  margin-inline: auto;
+  padding-inline: 100px;
+  max-width: 1060px;
+}
+
+.works__container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 80px 100px 0 100px;
+  margin: 55px 2px 0;
 }
 
-.works-item {
+.works__item {
   color: #333;
   max-width: 48%;
   height: auto;
 }
 
-.works-item:nth-child(n+3) {
+.works__item:nth-child(n+3) {
   margin-top: 60px;
 }
 
-.works-img {
+.works__img {
   overflow: hidden;
 }
 
-.works-img img {
+.works__img img {
   transition: transform .6s ease;
 }
 
-.works-img:hover img {
+.works__img:hover img {
   opacity: .8;
   transform: scale(1.04);
 }
 
-.works-name {
+.works__name {
   margin-top: 10px;
 }
 
 /*--------------------------------
  Contact
 ---------------------------------*/
-.contact-list {
-  width: fit-content;
-  margin: 0 170px 0 auto;
+.contact__inner {
+  margin-inline: auto;
+  padding-inline: 70px;
+  max-width: 1200px;
 }
 
-.lead {
-  line-height: 2;
-  margin-bottom: 10px;
+.contact__heading {
+  position: relative;
+}
+
+.contact__heading-text {
+  margin-bottom: 30px;
+}
+
+.contact__heading-text::after {
+  position: absolute;
+  bottom: 5px;
+  right: 80px;
+  width: 90%;
+  height: 1px;
+  content: "";
+  background-color: #9a9a9a;
+}
+
+.contact__container {
+  margin: 0 100px;
+}
+
+.contact__email {
+  font-size: 28px;
+  width: fit-content;
+  margin: 30px 0 0 auto;
+  font-weight: 300;
 }
 
 /*--------------------------------
@@ -345,7 +378,7 @@ hr {
   background-color: #fafafa;
 }
 
-.works-page-top {
+.works__page-top {
   background-color: #f1efeb;
 }
 
@@ -371,159 +404,31 @@ hr {
 /*--------------------------------
  下層：Worksページ
 ---------------------------------*/
-.article-container {
-  margin: 0 100px;
+.article__inner {
+  margin-inline: auto;
+  padding-inline: 100px;
+  max-width: 1060px;
 }
 
-.article-item {
+.article__item {
   margin: 0 auto;
   text-align: left;
 }
 
-.article-title {
+.article__title {
   font-size: 24px;
   margin: 70px auto 30px auto;
   text-align: left;
   font-family: 'Gothic A1';
 }
 
-.article-body {
+.article__body {
   line-height: 2.5;
-}
-
-
-/*media Queries 960
-----------------------------------------------------*/
-@media screen and (max-width: 960px) {
-  .concept {
-    font-size: 69px !important;
-  }
-
-  .skill-list {
-    display: block;
-    margin: 0 auto;
-    max-width: 70%;
-  }
-  
-  .skill-body {
-    display: block;
-    margin: 40px auto;
-  }
-  
-  .skill-img {
-    width: 100%;
-    margin: 0 auto 20px auto;
-  }
-  
-  .skill-item {
-    width: 100%;
-    margin-bottom: 35px;
-  }
-  
-  .skill-icon {
-    margin: 0 auto 10px;
-  }
-  
-  .skill-text {
-    width: 100%;
-  }
 }
 
 /*media Queries 768
 ----------------------------------------------------*/
 @media screen and (max-width: 768px) {
-  .mv-container img {
-    padding-top: calc(20vh);
-    padding-right: 45px;
-    padding-left: 50px;
-    float: right;
-  }
-
-  hr {
-    margin: auto auto 45px 25px;
-    transition: width 1s;
-    &.is-animated {
-      width: 60%;
-    }
-  }
-
-/*--------------------------------
-ヘッダー
----------------------------------*/
-  .header-logo {
-    font-size: 20px;
-  }
-
-  .gnav-item:not(:last-child) {
-    margin-right: 15px;
-  }
-
-  .gnav-item a {
-    font-size: 12px;
-  }
-
-  .gnav-item a:after {
-    display: none;
-  }
-
-/*--------------------------------
- About
----------------------------------*/
-  .profile-body {
-    margin-top: 30px;
-  }
-  
-  .name {
-    font-size: 25px !important;
-  }
-
-/*--------------------------------
- Works
----------------------------------*/
-  .works-section .container {
-    display: block;
-    padding: 0;
-  }
-
-  .works-list {
-    display: block;
-    width: fit-content;
-    margin: 0 auto;
-  }
-
-  .works-item {
-    margin-top: 40px;
-    display: block;
-    max-width: 100%;
-  }
-
-/*--------------------------------
- Contact
----------------------------------*/
-  .contact-section .container {
-    padding: 0;
-  }
-  
-  .lead {
-    line-height: 1.7;
-    margin-bottom: 10px;
-  }
-
-/*--------------------------------
- 下層：Worksページ
----------------------------------*/
-  .article-container {
-    margin: 0;
-  }
-
-  .article-title {
-    margin: 20px auto 40px auto;
-  }
-}
-
-/*media Queries 450
-----------------------------------------------------*/
-@media screen and (max-width: 450px) {
   .pc-only {
     display: none;
   }
@@ -531,24 +436,62 @@ hr {
   .sp-only {
     display: block;
   }
-
+  
   section {
-    padding: 75px 45px !important;
+    padding: 75px 0 !important;
+  }
+
+  article {
+    padding: calc(67px + 73px) 0 100px;
+  }
+  
+  .mv__inner, .about__inner, .skill__inner, .works__inner, .contact__inner, .article__inner {
+    margin-inline: auto;
+    padding-inline: 45px;
+    max-width: 480px;
+  }
+
+  /*--------------------------------
+  見出し
+  ---------------------------------*/
+  h2 {
+    font-size: 40px;
+  }
+
+  .about__heading-text, .contact__heading-text {
+    font-size: 14px;
+  }
+
+  /*--------------------------------
+  ヘッダー
+  ---------------------------------*/
+  .header__inner {
+    margin-inline: auto;
+    padding-inline: 20px;
+    padding-block: 24px;
+  }
+
+  .header__logo {
+    font-size: 16px;
+  }
+
+  .nav__item a {
+    font-size: 12px;
+  }
+
+  .nav__item a::after {
+    display: none;
   }
 
   .header {
     height: 67px;
   }
 
-  .header .container {
-    padding: 20px;
-  }
-
-  .header-logo {
+  .header__logo {
     font-size: 16px;
   }
 
-  .gnav {
+  .header__nav {
     position: absolute;
     right: 0;
     left: 0;
@@ -560,30 +503,30 @@ hr {
     transition: ease .4s;
   }
 
-  .gnav-list {
+  .nav__list {
     position: absolute;
-    bottom: 0%;
-    left: 30%;
+    bottom: 0;
+    left: 25%;
     transform: translate(-50%, -50%);
     padding: 0;
     display: block;
   }
 
-  .gnav-item {
+  .nav__item {
     margin: 20px 0 !important;
   }
 
-  .gnav-item a {
+  .nav__item a {
     color: #fafafa;
     display: block;
     font-size: 20px;
   }
 
-  .gnav-item a:after {
+  .nav__item a::after {
     display: none;
   }
 
-  .hamburger {
+  .hamburger__menu {
     display: block;
     width: 25px;
     height: 100%;
@@ -592,7 +535,7 @@ hr {
     z-index: 9999;
   }
   
-  .hamburger span {
+  .hamburger__menu span {
     width: 100%;
     height: 1px;
     background-color: #333;
@@ -601,130 +544,150 @@ hr {
     display: block;
   }
   
-  .hamburger span:nth-child(1) {
+  .hamburger__menu span:nth-child(1) {
     top: 0px; 
     margin-bottom: 8px;
   }
   
-  .hamburger span:nth-child(2) {
+  .hamburger__menu span:nth-child(2) {
     top: 0px;
     width: 70%;
   }
   
-  .gnav.active {
+  .header__nav.active {
     transform: translateY(0);
   }
   
-  .hamburger.active span {
+  .hamburger__menu.active span {
     background-color: #fafafa;
   }
 
-  .hamburger.active span:nth-child(1) {
+  .hamburger__menu.active span:nth-child(1) {
     transform: translateY(1.5px) rotate(-45deg);
     width: 70%;
     margin-bottom: 0;
   }
   
-  .hamburger.active span:nth-child(2) {
+  .hamburger__menu.active span:nth-child(2) {
     transform: translateY(0px) rotate(45deg);
   }
 
-  .mv-container {
-    height: 340px;
+  /*--------------------------------
+  メインビジュアル
+  ---------------------------------*/
+  .mv__inner {
+    height: 358px;
   }
 
-  .mv-container .thin-border {
+  .mv__thin-border {
     height: 55px;
     margin-bottom: 12px;
-    margin-left: 25%;
-    border-left: solid 1px #333;
   }
   
-  .mv-container .bold-border {
-    height: calc(340px - 50px);
-    margin-left: 25%;
-    border-left: solid 2px #333;
+  .mv__bold-border {
+    height: calc(358px - 55px - 12px);
   }
   
-  .mv-container img {
-    padding-top: calc(20vh);
-    padding-right: 45px;
+  .mv__text img {
     padding-left: 50px;
+    right: 0;
     float: right;
   }
 
-  .title-name {
-    font-size: 32px !important;
+  /*--------------------------------
+  About
+  ---------------------------------*/
+  .about__heading-text::after {
+    left: 52px;
+    width: 160px;
   }
 
-  hr {
-    margin: auto auto 40px 0;
-  }
-
-  .contact-section hr {
-    margin-right: 0;
-    margin-left: auto;
-  }
-
-  .about-body {
+  .about__container {
     max-width: 100%;
     margin: 0;
   }
 
-  .about-body p {
-    line-height: 2.5;
-  }
-
-  .concept {
+  .about__concept {
     font-size: 55px !important;
-    margin: 0 auto 30px -5px;
+    margin: 0 auto 35px -5px;
   }
 
-  .skill-section .title-name {
-    margin-right: 0;
-  }
-
-  .skill-list {
-    max-width: 90%;
-  }
-
-  .skill-name {
-    font-size: 16px;
-  }
-
-  .skill-icon img {
-    max-height: 60px;
-  }
-  
-  .skill-text {
-    line-height: 1.875;
-  }
-
-  .skill-body {
-    width: 85%;
-  }
-
-  .contact-section hr {
-    margin: 0 0 38px auto;
-  }
-
-  .contact-section .title-name {
-    margin-right: 0;
-  }
-
-  .contact-list {
-    font-size: 14px;
-    margin-right: 0;
+  .about__concept span:last-child {
+    padding-left: 40px;
+    display: block;
+    margin-top: -15px;
   }
 
   /*--------------------------------
- 下層：Worksページ
----------------------------------*/
-  .article {
-    padding: calc(100px + 30px) 45px 100px !important;
+  Skill
+  ---------------------------------*/
+  .skill__container {
+    margin: 0 auto 50px;
+    width: 90%;
   }
 
-  .article-title {
+  .skill__name {
+    font-size: 16px;
+  }
+
+  .skill__img {
+    width: 100%;
+    margin: 0 auto 20px auto;
+  }
+  
+  .skill__text {
+    line-height: 1.875;
+  }
+
+  .skill__body {
+    display: block;
+    margin: 40px auto;
+    width: 85%;
+  }
+  /*--------------------------------
+  Works
+  ---------------------------------*/
+  .works .container {
+    display: block;
+    padding: 0;
+  }
+
+  .works__container {
+    display: block;
+    margin: 25px 2px 0;
+  }
+
+  .works__item {
+    display: block;
+    max-width: 100%;
+  }
+
+  .works__item:nth-child(n+2) {
+    margin-top: 40px;
+  }
+
+  /*--------------------------------
+  Contact
+  ---------------------------------*/
+  .contact__heading-text::after {
+    right: 72px;
+    width: 70%
+  }
+
+  .contact__container {
+    margin: 0;
+  }
+
+  .contact__email {
     font-size: 20px;
+    margin: 6px 0 0 auto;
+  }
+  
+  /*--------------------------------
+  下層：Worksページ
+  ---------------------------------*/
+  .article__title {
+    font-size: 20px;
+    margin: 20px auto 30px auto;
   }
 }

@@ -1,7 +1,7 @@
 // hamburgerMenu
 const hamburger = $("#js-hamburger");
 const nav = $("#js-nav");
-const hamburgerLink = document.querySelectorAll(".gnav-item a");
+const hamburgerLink = document.querySelectorAll(".nav__item a");
 hamburger.on("click", function () {
   hamburger.toggleClass("active");
   nav.toggleClass("active");
@@ -27,22 +27,4 @@ $('a[href^="#"]').on("click", function() {
 $("#js-page-top").on("click", function() {
   $("body,html").animate({ scrollTop: 0, }, 1000);
   return false;
-});
-
-// titleUnderline
-var $target = $("hr");
-var offset = 50;
-$(window).on("scroll", function() {
-  var scroll = $(window).scrollTop();
-  var winHeight = $(window).height();
-  $target.each(function() {
-    //アニメーションさせたい要素の位置を取得
-    var position = $(this).offset().top;
-    //スクロール量 > アニメーションさせたい要素の位置
-    if (scroll > position - winHeight + offset && scroll < position - offset) {
-      $(this).addClass("is-animated");
-    } else {
-      $(this).removeClass("is-animated");
-    }
-  })
 });
