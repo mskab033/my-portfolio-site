@@ -28,3 +28,17 @@ $("#js-page-top").on("click", function() {
   $("body,html").animate({ scrollTop: 0, }, 1000);
   return false;
 });
+
+// fadeinAnimation
+$(window).on("scroll", function() {
+  var $target = $(".animation-fadein");
+  var offset = 50;
+  $target.each(function() {
+    var position = $(this).offset().top - offset;
+    var scroll = $(window).scrollTop();
+    var windowHeight = $(window).height();
+    if (scroll >= position - windowHeight) {
+      $(this).addClass("fadeIn");
+    }
+  });
+});

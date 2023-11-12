@@ -24,6 +24,27 @@ img {
   font-family: Arial;
 }
 
+/* animation */
+.animation-fadein {
+  opacity: 0;
+}
+
+.fadeIn {
+  animation-name: fadeinAnimation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeinAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /*--------------------------------
  レイアウト
 ---------------------------------*/
