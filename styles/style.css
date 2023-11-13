@@ -597,13 +597,17 @@ h6 {
   /*--------------------------------
   メインビジュアル
   ---------------------------------*/
+  .mv__inner {
+    height: 90vh;
+  }
+
   .mv__thin-border {
     height: 55px;
     margin-bottom: 12px;
   }
   
   .mv__bold-border {
-    height: calc(100vh - 55px - 12px);
+    height: calc(90vh - 55px - 12px);
   }
   
   .mv__text img {
